@@ -103,3 +103,6 @@ $transition-collapse: height .15s ease !default;
 // Dropdowns
 $dropdown-font-size: 0.85rem;
 $dropdown-border-color: $border-color;
+//
+$ease-out-quint: cubic-bezier(0.23, 1, 0.32, 1);
+$ease-out-quart: cubic-bezier(0.165, 0.84, 0.44, 1);
