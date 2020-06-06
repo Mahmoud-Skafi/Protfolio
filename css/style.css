@@ -1,0 +1,108 @@
+@font-face {
+  font-family: robotoT !important;
+  src: url("../fonts/Roboto-Thin.ttf"); }
+@font-face {
+  font-family: robotoR;
+  src: url("../fonts/Roboto-Regular.ttf"); }
+@font-face {
+  font-family: robotoM;
+  src: url("../fonts/Roboto-Medium.ttf"); }
+@font-face {
+  font-family: robotoL;
+  src: url("../fonts/Roboto-Light.ttf"); }
+@font-face {
+  font-family: robotoB;
+  src: url("../fonts/Roboto-Bold.ttf"); }
+@font-face {
+  font-family: robotoBB;
+  src: url("../fonts/Roboto-Black.ttf"); }
+.sk-jcc {
+  display: flex;
+  justify-content: center; }
+
+.sk-jcs {
+  display: flex;
+  justify-content: flex-start; }
+
+.sk-jce {
+  display: flex;
+  justify-content: flex-end; }
+
+.sk-jcb {
+  display: flex;
+  justify-content: space-between; }
+
+.sk-jca {
+  display: flex;
+  justify-content: space-around; }
+
+.sk-jcse {
+  display: flex;
+  justify-content: space-evenly; }
+
+.sk-aic {
+  display: flex;
+  align-items: center; }
+
+.sk-flex-row {
+  display: flex;
+  flex-direction: row; }
+
+.sk-flex-col {
+  display: flex;
+  flex-direction: column; }
+
+.sk-flex {
+  display: flex; }
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  background: #282828;
+  font-family: robotoB;
+  text-transform: uppercase;
+  font-size: 16px; }
+
+.sk-nav-logo {
+  margin-top: 120px;
+  margin-bottom: 40px; }
+
+.sk-nav-elements li {
+  list-style: none;
+  padding: 25px;
+  margin: 0px 10px; }
+  .sk-nav-elements li a {
+    font-size: 1rem;
+    color: #fff;
+    text-decoration: none;
+    position: relative; }
+    .sk-nav-elements li a::before {
+      content: "{";
+      color: #53d2fb;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: all .3s ease-out; }
+    .sk-nav-elements li a::after {
+      content: "}";
+      color: #bd69ff;
+      position: absolute;
+      top: 50%;
+      right: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      font-size: 1.2rem;
+      transition: all .3s ease-out; }
+    .sk-nav-elements li a:hover:after {
+      opacity: 1;
+      right: -30%; }
+    .sk-nav-elements li a:hover:before {
+      opacity: 1;
+      left: -20%; }
+    .sk-nav-elements li a:active:before {
+      opacity: 1; }
+
+/*# sourceMappingURL=style.css.map */
