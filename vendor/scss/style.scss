@@ -22,7 +22,7 @@ html:hover {
     }
 }
 .sk-nav-logo {
-    margin-top: 80px;
+    margin-top: 40px;
     margin-bottom: 40px;
 }
 .sk-nav-elements {
@@ -92,6 +92,10 @@ html:hover {
 }
 .sk-main-text {
     margin-top: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
     h1 {
         font-size: 2.2rem;
         line-height: 45px;
@@ -105,45 +109,19 @@ html:hover {
     color: #000;
 }
 .sk-but {
-    margin-top: 50px;
-    width: 180px;
-    height: 50px;
-    background-color: $but-shadow;
     display: flex;
-    justify-content: center;
-    align-items: center;
     border-radius: 3px;
-    position: relative;
-    z-index: 88;
-    transition: .3s ease-in-out;
+    width: fit-content;
     &:hover:before {
-        content: "about me";
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: #000;
-        text-decoration: none;
-        font-family: Muli;
-        font-style: normal;
-        font-weight: 800;
-        font-size: 1rem;
-        line-height: 31px;
-        letter-spacing: 0.04em;
-        text-transform: uppercase;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        border-radius: 3px;
-        z-index: -1;
-        top: 5px;
-        left: 5px;
-        background-color: $but-clr;
     }
     a {
+        transition: all 0.5s ease-out;
+        width: 180px;
+        height: 50px;
         display: flex;
         justify-content: center;
         align-items: center;
-        color: #000;
+        color: $white;
         text-decoration: none;
         font-family: Muli;
         font-style: normal;
@@ -153,9 +131,8 @@ html:hover {
         letter-spacing: 0.04em;
         text-transform: uppercase;
         opacity: 1;
-    }
-    &:hover a{
-        opacity: 0;
+        border: 2px solid $white;
+        z-index: 1000;
     }
 }
 @media only screen and (max-width: 1300px) {
@@ -173,6 +150,84 @@ html:hover {
         span {
             font-size: 1.5rem;
             color: sandybrown;
+        }
+    }
+}
+.sk-divider {
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    margin-bottom: 20px;
+    margin-top: 0px;
+}
+.sk-section-2
+{
+    margin-top:150px ;
+}
+.sk-header {
+    display: flex;
+    justify-content: center;
+    z-index: 150;
+    margin-bottom: 80px;
+    
+    a {
+        
+        font-size: 2rem;
+        margin: 0px 60px;
+        font-family: robotoM;
+        z-index: 150 !important;
+        position: relative;
+        &::after{
+            content: '';
+            position: absolute;
+            padding: 30px;
+            background-color: transparent;
+            top: 0px;
+            left: 0px;
+
+        }
+    }
+    a:first-child {
+        color: #53d2fb;
+    }
+    a:last-child {
+        color: #bd69ff;
+    }
+    span {
+        font-size: 46px;
+    }
+}
+.sk-bechance-logo
+{
+    display: flex;
+    justify-content: center;
+    .sk-behance-text{
+        color: $white;
+        text-decoration: none;
+        font-size: 2rem;
+        z-index: 120;
+        position: relative;
+        &::after{
+            content: '';
+            position: absolute;
+            padding: 35px;
+            background-color: transparent;
+            top: 0px;
+            left: 0px;
+        }
+    }
+}
+.sk-card-container
+{
+    display: grid;
+    grid-gap: 1.5em;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    .sk-card-image
+    {
+       
+        img{
+            border-radius: 3px ;
+            width: 100%;
         }
     }
 }

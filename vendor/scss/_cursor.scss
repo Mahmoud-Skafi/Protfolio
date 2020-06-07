@@ -2,7 +2,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 99;
+    z-index: 1;
     width: 3.5rem;
     height: 3.5rem;
     margin: -25px 0 0 -25px;
@@ -10,7 +10,7 @@
     transition: opacity 0.2s $ease-out-quart;
     pointer-events: none;
     background: transparent;
-
+    filter: grayscale(100%);
     &--hover {
         .cursor-inner {
             transform: scale(0.5);
@@ -97,4 +97,24 @@ button {
         color: #000 !important;
         font-family: robotoB;
     }
+}
+.but-hover {
+    border-color: #000 !important;
+    letter-spacing: 15rem;
+    a {
+        color: #000 !important;
+        border-color: #000 !important;
+        letter-spacing: 8.005px !important;
+    }
+}
+.sk-svg-hover {
+    circle {
+        transform: matrix(-1 0 0 1 12 13.5652) !important;
+    }
+}
+.bechance-hover {
+    color: $behance-clr !important;
+}
+.work-text-hover {
+    color: #000 !important;
 }

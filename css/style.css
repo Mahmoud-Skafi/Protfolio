@@ -59,14 +59,15 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 99;
+  z-index: 1;
   width: 3.5rem;
   height: 3.5rem;
   margin: -25px 0 0 -25px;
   opacity: 0;
   transition: opacity 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
   pointer-events: none;
-  background: transparent; }
+  background: transparent;
+  filter: grayscale(100%); }
   .cursor--hover .cursor-inner {
     transform: scale(0.5);
     opacity: 0; }
@@ -138,6 +139,23 @@ button {
   color: #000 !important;
   font-family: robotoB; }
 
+.but-hover {
+  border-color: #000 !important;
+  letter-spacing: 15rem; }
+  .but-hover a {
+    color: #000 !important;
+    border-color: #000 !important;
+    letter-spacing: 8.005px !important; }
+
+.sk-svg-hover circle {
+  transform: matrix(-1 0 0 1 12 13.5652) !important; }
+
+.bechance-hover {
+  color: #4176FA !important; }
+
+.work-text-hover {
+  color: #000 !important; }
+
 * {
   padding: 0px;
   margin: 0px;
@@ -156,7 +174,7 @@ html:hover .cursor {
   opacity: 1; }
 
 .sk-nav-logo {
-  margin-top: 80px;
+  margin-top: 40px;
   margin-bottom: 40px; }
 
 .sk-nav-elements li {
@@ -211,7 +229,11 @@ html:hover .cursor {
   padding-right: 150px; }
 
 .sk-main-text {
-  margin-top: 60px; }
+  margin-top: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  flex-direction: column; }
   .sk-main-text h1 {
     font-size: 2.2rem;
     line-height: 45px; }
@@ -223,44 +245,17 @@ html:hover .cursor {
   color: #000; }
 
 .sk-but {
-  margin-top: 50px;
-  width: 180px;
-  height: 50px;
-  background-color: rgba(196, 196, 196, 0.6);
   display: flex;
-  justify-content: center;
-  align-items: center;
   border-radius: 3px;
-  position: relative;
-  z-index: 88;
-  transition: .3s ease-in-out; }
-  .sk-but:hover:before {
-    content: "about me";
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #000;
-    text-decoration: none;
-    font-family: Muli;
-    font-style: normal;
-    font-weight: 800;
-    font-size: 1rem;
-    line-height: 31px;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 3px;
-    z-index: -1;
-    top: 5px;
-    left: 5px;
-    background-color: #C4C4C4; }
+  width: fit-content; }
   .sk-but a {
+    transition: all 0.5s ease-out;
+    width: 180px;
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #000;
+    color: #fff;
     text-decoration: none;
     font-family: Muli;
     font-style: normal;
@@ -269,9 +264,9 @@ html:hover .cursor {
     line-height: 31px;
     letter-spacing: 0.04em;
     text-transform: uppercase;
-    opacity: 1; }
-  .sk-but:hover a {
-    opacity: 0; }
+    opacity: 1;
+    border: 2px solid #fff;
+    z-index: 1000; }
 
 @media only screen and (max-width: 1300px) {
   .sk-about-image img {
@@ -284,5 +279,64 @@ html:hover .cursor {
   .sk-main-text span {
     font-size: 1.5rem;
     color: sandybrown; } }
+.sk-divider {
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  margin-bottom: 20px;
+  margin-top: 0px; }
+
+.sk-section-2 {
+  margin-top: 150px; }
+
+.sk-header {
+  display: flex;
+  justify-content: center;
+  z-index: 150;
+  margin-bottom: 80px; }
+  .sk-header a {
+    font-size: 2rem;
+    margin: 0px 60px;
+    font-family: robotoM;
+    z-index: 150 !important;
+    position: relative; }
+    .sk-header a::after {
+      content: '';
+      position: absolute;
+      padding: 30px;
+      background-color: transparent;
+      top: 0px;
+      left: 0px; }
+  .sk-header a:first-child {
+    color: #53d2fb; }
+  .sk-header a:last-child {
+    color: #bd69ff; }
+  .sk-header span {
+    font-size: 46px; }
+
+.sk-bechance-logo {
+  display: flex;
+  justify-content: center; }
+  .sk-bechance-logo .sk-behance-text {
+    color: #fff;
+    text-decoration: none;
+    font-size: 2rem;
+    z-index: 120;
+    position: relative; }
+    .sk-bechance-logo .sk-behance-text::after {
+      content: '';
+      position: absolute;
+      padding: 35px;
+      background-color: transparent;
+      top: 0px;
+      left: 0px; }
+
+.sk-card-container {
+  display: grid;
+  grid-gap: 1.5em;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); }
+  .sk-card-container .sk-card-image img {
+    border-radius: 3px;
+    width: 100%; }
 
 /*# sourceMappingURL=style.css.map */
