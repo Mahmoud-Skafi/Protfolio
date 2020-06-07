@@ -1,0 +1,233 @@
+@import "_global.scss";
+@import "_display.scss";
+@import "_cursor.scss";
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    background: $primary-clr;
+    font-family: robotoB;
+    color: $white;
+    text-transform: uppercase;
+    font-size: 16px;
+    cursor: none;
+}
+
+body {
+    background: $primary-clr;
+}
+html:hover {
+    .cursor {
+        opacity: 1;
+    }
+}
+.sk-nav-logo {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.sk-nav-elements {
+    li {
+        list-style: none;
+        padding: 25px;
+        margin: 0px 10px;
+        a {
+            z-index: 100;
+            font-size: 1rem;
+            color: $white;
+            text-decoration: none;
+            position: relative;
+            &:hover {
+            }
+            &::before {
+                content: "{";
+                color: #53d2fb;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                opacity: 0;
+                transition: all 0.3s ease-out;
+            }
+            &::after {
+                content: "}";
+                color: #bd69ff;
+                position: absolute;
+                top: 50%;
+                right: 50%;
+                transform: translate(-50%, -50%);
+                opacity: 0;
+                font-size: 1.2rem;
+
+                transition: all 0.3s ease-out;
+            }
+            &:hover:after {
+            }
+            &:hover:before {
+                opacity: 1;
+                left: -20%;
+            }
+        }
+        &:hover a::after {
+            opacity: 1;
+            right: -30%;
+        }
+        &:hover a:before {
+            opacity: 1;
+            left: -20%;
+        }
+    }
+}
+.sk-about-image {
+    margin-left: 150px;
+    img {
+        width: 434px;
+        height: 414px;
+    }
+}
+.sk-contianer {
+    margin-top: 50px;
+    padding: 0px;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+.sk-main-text {
+    margin-top: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    h1 {
+        font-size: 2.2rem;
+        line-height: 45px;
+    }
+    span {
+        font-size: 2.2rem;
+        color: sandybrown;
+    }
+}
+.hover-h1 {
+    color: #000;
+}
+.sk-but {
+    display: flex;
+    border-radius: 3px;
+    width: fit-content;
+    &:hover:before {
+    }
+    a {
+        transition: all 0.5s ease-out;
+        width: 180px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $white;
+        text-decoration: none;
+        font-family: Muli;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 1rem;
+        line-height: 31px;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        opacity: 1;
+        border: 2px solid $white;
+        z-index: 1000;
+    }
+}
+@media only screen and (max-width: 1300px) {
+    .sk-about-image {
+        img {
+            width: 334px;
+            height: 314px;
+        }
+    }
+    .sk-main-text {
+        h1 {
+            font-size: 1.5rem;
+            line-height: 45px;
+        }
+        span {
+            font-size: 1.5rem;
+            color: sandybrown;
+        }
+    }
+}
+.sk-divider {
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    margin-bottom: 20px;
+    margin-top: 0px;
+}
+.sk-section-2
+{
+    margin-top:150px ;
+}
+.sk-header {
+    display: flex;
+    justify-content: center;
+    z-index: 150;
+    margin-bottom: 80px;
+    
+    a {
+        
+        font-size: 2rem;
+        margin: 0px 60px;
+        font-family: robotoM;
+        z-index: 150 !important;
+        position: relative;
+        &::after{
+            content: '';
+            position: absolute;
+            padding: 30px;
+            background-color: transparent;
+            top: 0px;
+            left: 0px;
+
+        }
+    }
+    a:first-child {
+        color: #53d2fb;
+    }
+    a:last-child {
+        color: #bd69ff;
+    }
+    span {
+        font-size: 46px;
+    }
+}
+.sk-bechance-logo
+{
+    display: flex;
+    justify-content: center;
+    .sk-behance-text{
+        color: $white;
+        text-decoration: none;
+        font-size: 2rem;
+        z-index: 120;
+        position: relative;
+        &::after{
+            content: '';
+            position: absolute;
+            padding: 35px;
+            background-color: transparent;
+            top: 0px;
+            left: 0px;
+        }
+    }
+}
+.sk-card-container
+{
+    display: grid;
+    grid-gap: 1.5em;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    .sk-card-image
+    {
+       
+        img{
+            border-radius: 3px ;
+            width: 100%;
+        }
+    }
+}

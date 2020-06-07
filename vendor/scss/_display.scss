@@ -1,0 +1,40 @@
+.sk-jcc {
+    display: flex;
+    justify-content: center;
+}
+
+.sk-jcs {
+    display: flex;
+    justify-content: flex-start;
+}
+.sk-jce {
+    display: flex;
+    justify-content: flex-end;
+}
+.sk-jcb {
+    display: flex;
+    justify-content: space-between;
+}
+.sk-jca {
+    display: flex;
+    justify-content: space-around;
+}
+.sk-jcse {
+    display: flex;
+    justify-content: space-evenly;
+}
+.sk-aic {
+    display: flex;
+    align-items: center;
+}
+.sk-flex-row {
+    display: flex;
+    flex-direction: row;
+}
+.sk-flex-col {
+    display: flex;
+    flex-direction: column;
+}
+.sk-flex{
+    display: flex;
+}

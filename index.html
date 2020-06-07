@@ -1,11 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SKAFIPS</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- <div class="cursor"></div> -->
+    <span class="cursor">
+      <span class="cursor-move-inner">
+        <span class="cursor-inner"></span>
+      </span>
+      <span class="cursor-move-outer">
+        <span class="cursor-outer"></span>
+      </span>
+    </span>
+    <nav>
+      <div class="container">
+        <div class="row sk-flex-col sk-jcc sk-aic">
+          <div class="sk-nav-logo">
+            <svg
+              width="189"
+              height="53"
+              viewBox="0 0 189 53"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M13.2503 42.5078H34.7308V52H0.910461V0.8125H13.2503V42.5078Z"
+                fill="white"
+              />
+              <path
+                d="M83.9116 27.4609C83.9116 32.4531 82.9858 36.8711 81.1342 40.7148C79.2827 44.5586 76.6459 47.5234 73.2241 49.6094C69.8256 51.6719 65.9467 52.7031 61.5873 52.7031C57.228 52.7031 53.3608 51.707 49.9858 49.7148C46.6108 47.6992 43.9741 44.8281 42.0756 41.1016C40.2006 37.375 39.2162 33.0977 39.1225 28.2695V25.3867C39.1225 20.3711 40.0366 15.9531 41.8647 12.1328C43.7162 8.28906 46.353 5.32422 49.7748 3.23828C53.2201 1.15234 57.1342 0.109375 61.517 0.109375C65.853 0.109375 69.7202 1.14062 73.1186 3.20312C76.517 5.26562 79.1537 8.20703 81.0287 12.0273C82.9272 15.8242 83.8881 20.1836 83.9116 25.1055V27.4609ZM71.3608 25.3164C71.3608 20.2305 70.5053 16.375 68.7944 13.75C67.1069 11.1016 64.6811 9.77734 61.517 9.77734C55.3295 9.77734 52.06 14.418 51.7084 23.6992L51.6733 27.4609C51.6733 32.4766 52.5053 36.332 54.1694 39.0273C55.8334 41.7227 58.3061 43.0703 61.5873 43.0703C64.7045 43.0703 67.1069 41.7461 68.7944 39.0977C70.4819 36.4492 71.3373 32.6406 71.3608 27.6719V25.3164Z"
+                fill="white"
+              />
+              <path
+                d="M135.061 45.6719C133.163 47.7812 130.385 49.4805 126.729 50.7695C123.073 52.0586 119.065 52.7031 114.706 52.7031C108.002 52.7031 102.647 50.6523 98.6392 46.5508C94.6314 42.4492 92.4869 36.7422 92.2056 29.4297L92.1705 25C92.1705 19.9609 93.0611 15.5664 94.8423 11.8164C96.6236 8.04297 99.1666 5.14844 102.471 3.13281C105.799 1.09375 109.643 0.0742188 114.002 0.0742188C120.377 0.0742188 125.323 1.53906 128.838 4.46875C132.377 7.375 134.44 11.7227 135.026 17.5117H123.143C122.721 14.6523 121.807 12.6133 120.401 11.3945C118.995 10.1758 117.002 9.56641 114.424 9.56641C111.331 9.56641 108.94 10.8789 107.252 13.5039C105.565 16.1289 104.71 19.8789 104.686 24.7539V27.8477C104.686 32.957 105.553 36.8008 107.288 39.3789C109.045 41.9336 111.799 43.2109 115.549 43.2109C118.76 43.2109 121.151 42.4961 122.721 41.0664V33.1211H114.143V24.6484H135.061V45.6719Z"
+                fill="white"
+              />
+              <path
+                d="M188.461 27.4609C188.461 32.4531 187.535 36.8711 185.683 40.7148C183.832 44.5586 181.195 47.5234 177.773 49.6094C174.375 51.6719 170.496 52.7031 166.136 52.7031C161.777 52.7031 157.91 51.707 154.535 49.7148C151.16 47.6992 148.523 44.8281 146.625 41.1016C144.75 37.375 143.765 33.0977 143.672 28.2695V25.3867C143.672 20.3711 144.586 15.9531 146.414 12.1328C148.265 8.28906 150.902 5.32422 154.324 3.23828C157.769 1.15234 161.683 0.109375 166.066 0.109375C170.402 0.109375 174.269 1.14062 177.668 3.20312C181.066 5.26562 183.703 8.20703 185.578 12.0273C187.476 15.8242 188.437 20.1836 188.461 25.1055V27.4609ZM175.91 25.3164C175.91 20.2305 175.054 16.375 173.343 13.75C171.656 11.1016 169.23 9.77734 166.066 9.77734C159.879 9.77734 156.609 14.418 156.258 23.6992L156.222 27.4609C156.222 32.4766 157.054 36.332 158.718 39.0273C160.383 41.7227 162.855 43.0703 166.136 43.0703C169.254 43.0703 171.656 41.7461 173.343 39.0977C175.031 36.4492 175.886 32.6406 175.91 27.6719V25.3164Z"
+                fill="white"
+              />
+            </svg>
+            <!-- <img src="" alt="" /> -->
+          </div>
+          <div class="sk-nav-elements">
+            <ul class="sk-flex">
+              <li>
+                <a href="#">Home</a>
+              </li>
+              <li>
+                <a href="#">About me</a>
+              </li>
+              <li>
+                <a href="#">Wrok</a>
+              </li>
+              <li>
+                <a href="#">Git in touch</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section>
+      <div class="sk-contianer">
+        <div class="">
+          <div class="sk-section-contianer sk-jcb">
+            <div class="sk-main-text">
+              <h1>
+                HI my name <br />mahmoud sakfi a
+                <span>
+                  <a
+                    href=""
+                    class="typewrite"
+                    data-period="1000"
+                    data-type='[ "Designer.", "Web developer.", "UI/UX. ", "I Love to Develop." ]'
+                  >
+                    <span class="wrap"></span>
+                  </a>
+                </span>
+              </h1>
+              <br />
+              <h1></h1>
+              <div class="sk-but">
+                <a href="">about me</a>
+              </div>
+            </div>
+            <div class="sk-about-image">
+              <img src="./images/1.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="sk-divider">
+      <svg
+        class="sk-svg"
+        width="24"
+        height="54"
+        viewBox="0 0 24 54"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect
+          x="-0.5"
+          y="0.5"
+          width="23.0001"
+          height="51.174"
+          rx="11.5"
+          transform="matrix(-1 0 0 1 23 0.912964)"
+          stroke="white"
+        />
+        <circle
+          r="9.39132"
+          transform="matrix(-1 0 0 1 12 40.5652)"
+          fill="white"
+          class="sk-circle"
+        />
+      </svg>
+    </div>
+
+    <!-- section-2 -->
+    <section class="sk-section-2">
+      <div class="sk-header sk-jcc">
+        <a>{</a>
+        <a>W</a>
+        <a>o</a>
+        <a>r</a>
+        <a>k</a>
+        <a>}</a>
+      </div>
+      <div class="sk-bechance-logo">
+        <a href="" class="sk-behance-text" style="text-transform: capitalize;"
+          >Bē</a
+        >
+      </div>
+      <div class="sk-contianer">
+        <div class="sk-card-container">
+          <div class="sk-card-behance-container">
+          <div class="sk-card">
+            <div class="sk-card-image">
+              <img src="./images/image 1.png" alt="" />
+            </div>
+          </div>
+          <div class="sk-card-behance-detiles">
+            <h1>Project name</h1>
+            <p>12</p>
+            <p>150</p>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/main.js"></script>
+  </body>
 </html>
