@@ -1,7 +1,7 @@
 @import "_global.scss";
 @import "_display.scss";
 @import "_cursor.scss";
-* {
+:root {
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
@@ -12,9 +12,18 @@
     font-size: 16px;
     cursor: none;
 }
-
+h1,
+p {
+    background-color: transparent !important;
+    margin: 0px !important;
+}
+a {
+    background-color: transparent;
+}
+p {
+}
 body {
-    background: $primary-clr;
+    // background: $primary-clr;
 }
 html:hover {
     .cursor {
@@ -160,31 +169,28 @@ html:hover {
     margin-bottom: 20px;
     margin-top: 0px;
 }
-.sk-section-2
-{
-    margin-top:150px ;
+.sk-section-2 {
+    margin-top: 150px;
 }
 .sk-header {
     display: flex;
     justify-content: center;
     z-index: 150;
     margin-bottom: 80px;
-    
+
     a {
-        
         font-size: 2rem;
         margin: 0px 60px;
         font-family: robotoM;
         z-index: 150 !important;
         position: relative;
-        &::after{
-            content: '';
+        &::after {
+            content: "";
             position: absolute;
             padding: 30px;
             background-color: transparent;
             top: 0px;
             left: 0px;
-
         }
     }
     a:first-child {
@@ -197,37 +203,95 @@ html:hover {
         font-size: 46px;
     }
 }
-.sk-bechance-logo
-{
+.sk-bechance-logo {
     display: flex;
     justify-content: center;
-    .sk-behance-text{
+    .sk-behance-text {
         color: $white;
         text-decoration: none;
         font-size: 2rem;
         z-index: 120;
         position: relative;
-        &::after{
-            content: '';
+        text-transform: capitalize;
+        padding: 20px;
+        cursor: none;
+    }
+}
+
+.sk-card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 3rem;
+    // overflow: hidden;
+    // transform-style: preserve-3d;
+
+    // box-shadow: 0 5px 30px rgba(14, 21, 47, 0.4);
+    // position: relative;
+    .sk-card {
+        position: relative;
+
+        &::after {
+            content: "";
             position: absolute;
-            padding: 35px;
-            background-color: transparent;
-            top: 0px;
-            left: 0px;
+            z-index: 20;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            top: -0px;
+            left: -0px;
+            border-radius: 3px;
+            background-color: rgba(240, 177, 47, 0.5);
+            opacity: 0;
+            transition: all 0.3s ease-in-out;
+        }
+        &:hover:after {
+            opacity: 1;
+            top: -12px;
+            left: -12px;
+        }
+    }
+
+    .sk-card-image {
+        div {
+        }
+        img {
+            border-radius: 3px;
+            width: 100%;
+        }
+    }
+
+    .sk-card-behance-detiles {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: $white !important;
+        padding: 15px 0px;
+        border-radius: 3px;
+        margin-top: 15px;
+
+        h1 {
+            font-size: 1rem;
+            font-family: robotoR;
+            color: #000;
+        }
+        p {
+            color: #000;
         }
     }
 }
-.sk-card-container
-{
-    display: grid;
-    grid-gap: 1.5em;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    .sk-card-image
-    {
-       
-        img{
-            border-radius: 3px ;
-            width: 100%;
-        }
+.layer {
+    // position: absolute;
+    background: url("../images/33.png") no-repeat;
+    background-size: cover;
+    border-radius: 3px;
+    width: 100%;
+    height: 100%;
+}
+@keyframes cardAnamation {
+    form {
+        margin-bottom: 0px;
+    }
+    to {
+        margin-bottom: 20px;
     }
 }

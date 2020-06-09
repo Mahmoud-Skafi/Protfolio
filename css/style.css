@@ -156,7 +156,7 @@ button {
 .work-text-hover {
   color: #000 !important; }
 
-* {
+:root {
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
@@ -167,8 +167,13 @@ button {
   font-size: 16px;
   cursor: none; }
 
-body {
-  background: #282828; }
+h1,
+p {
+  background-color: transparent !important;
+  margin: 0px !important; }
+
+a {
+  background-color: transparent; }
 
 html:hover .cursor {
   opacity: 1; }
@@ -301,7 +306,7 @@ html:hover .cursor {
     z-index: 150 !important;
     position: relative; }
     .sk-header a::after {
-      content: '';
+      content: "";
       position: absolute;
       padding: 30px;
       background-color: transparent;
@@ -322,21 +327,63 @@ html:hover .cursor {
     text-decoration: none;
     font-size: 2rem;
     z-index: 120;
-    position: relative; }
-    .sk-bechance-logo .sk-behance-text::after {
-      content: '';
-      position: absolute;
-      padding: 35px;
-      background-color: transparent;
-      top: 0px;
-      left: 0px; }
+    position: relative;
+    text-transform: capitalize;
+    padding: 20px;
+    cursor: none; }
 
 .sk-card-container {
   display: grid;
-  grid-gap: 1.5em;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); }
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 3rem; }
+  .sk-card-container .sk-card {
+    position: relative; }
+    .sk-card-container .sk-card::after {
+      content: "";
+      position: absolute;
+      z-index: 20;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      top: -0px;
+      left: -0px;
+      border-radius: 3px;
+      background-color: rgba(240, 177, 47, 0.5);
+      opacity: 0;
+      transition: all 0.3s ease-in-out; }
+    .sk-card-container .sk-card:hover:after {
+      opacity: 1;
+      top: -12px;
+      left: -12px; }
   .sk-card-container .sk-card-image img {
     border-radius: 3px;
     width: 100%; }
+  .sk-card-container .sk-card-behance-detiles {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fff !important;
+    padding: 15px 0px;
+    border-radius: 3px;
+    margin-top: 15px; }
+    .sk-card-container .sk-card-behance-detiles h1 {
+      font-size: 1rem;
+      font-family: robotoR;
+      color: #000; }
+    .sk-card-container .sk-card-behance-detiles p {
+      color: #000; }
+
+.layer {
+  background: url("../images/33.png") no-repeat;
+  background-size: cover;
+  border-radius: 3px;
+  width: 100%;
+  height: 100%; }
+
+@keyframes cardAnamation {
+  form {
+    margin-bottom: 0px; }
+  to {
+    margin-bottom: 20px; } }
 
 /*# sourceMappingURL=style.css.map */
