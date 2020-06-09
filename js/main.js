@@ -5,11 +5,15 @@ const cursorOuter = document.querySelector('.cursor-move-outer');
 let navlinks = document.querySelectorAll('.sk-flex li');
 const trigger = document.querySelector('button');
 let headerText = document.querySelector('.sk-main-text h1');
-let but = document.querySelector('.sk-but');
+let but = document.querySelectorAll('.sk-but');
 let svg = document.querySelector('.sk-svg');
 let svgCircle = document.querySelector('.sk-circle');
 let bechance = document.querySelector('.sk-behance-text');
 let workText = document.querySelectorAll('.sk-header a');
+let github = document.querySelector('.github');
+let section = document.querySelector('.sk-contianer');
+let githubCrad = document.querySelectorAll('.sk-github-card-container');
+let behanceCard = document.querySelectorAll('.sk-card-behance-container');
 let mouseX = 0;
 let mouseY = 0;
 let mouseA = 0;
@@ -30,6 +34,22 @@ document.addEventListener('mousemove', (e) => {
     loop = window.requestAnimationFrame(render);
   }
 });
+behanceCard.forEach(card => {
+  card.addEventListener('mouseenter', () => {
+    cursor.classList.add('cursor----hover');
+  });
+  card.addEventListener('mouseleave', () => {
+    cursor.classList.remove('cursor----hover');
+  });
+});
+githubCrad.forEach(card => {
+  card.addEventListener('mouseenter', () => {
+    cursor.classList.add('cursor----hover');
+  });
+  card.addEventListener('mouseleave', () => {
+    cursor.classList.remove('cursor----hover');
+  });
+});
 bechance.addEventListener('mouseenter', () => {
   cursor.classList.add('cursor--hover');
   bechance.classList.add('bechance-hover');
@@ -38,14 +58,13 @@ bechance.addEventListener('mouseleave', () => {
   cursor.classList.remove('cursor--hover');
   bechance.classList.remove('bechance-hover');
 });
-
-but.addEventListener('mouseenter', () => {
-  cursor.classList.add('cursor--hover');
-  but.classList.add('but-hover');
+github.addEventListener('mouseenter', () => {
+  cursor.classList.add('cursor---hover');
+  github.classList.add('github-hover');
 });
-but.addEventListener('mouseleave', () => {
-  cursor.classList.remove('cursor--hover');
-  but.classList.remove('but-hover');
+github.addEventListener('mouseleave', () => {
+  cursor.classList.remove('cursor---hover');
+  github.classList.remove('github-hover');
 });
 // svg.addEventListener('mouseenter',()=>{
 // cursor.classList.add('cursor--hover');
@@ -56,17 +75,28 @@ but.addEventListener('mouseleave', () => {
 //   svgCircle.style.transform='matrix(-1 0 0 1 12 13.5652) !important;';
 //   });
 let workTextSize = workText.length;
-for (let i = 1; i < workTextSize-1; i++) {
+for (let i = 1; i < workTextSize - 1; i++) {
   workText[i].addEventListener('mouseenter', () => {
     cursor.classList.add('cursor--hover');
     workText[i].classList.add('work-text-hover');
   });
-  workText[i].addEventListener('mouseleave',()=>{
+  workText[i].addEventListener('mouseleave', () => {
     cursor.classList.remove('cursor--hover');
     workText[i].classList.remove('work-text-hover');
   });
 };
+but.forEach(but => {
 
+  but.addEventListener('mouseenter', () => {
+    cursor.classList.add('cursor--hover');
+    but.classList.add('but-hover');
+  });
+  but.addEventListener('mouseleave', () => {
+    cursor.classList.remove('cursor--hover');
+    but.classList.remove('but-hover');
+  });
+
+});
 navlinks.forEach(link => {
   link.addEventListener('mouseenter', () => {
     cursor.classList.add('cursor--hover');
