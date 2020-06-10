@@ -76,6 +76,22 @@
     background: #fff;
     border-color: #000;
     opacity: 1; }
+  .cursor---hover .cursor-inner {
+    transform: scale(0.5);
+    opacity: 0; }
+  .cursor---hover .cursor-outer {
+    transform: scale(1.5);
+    background: transparent;
+    border-color: #fff;
+    opacity: 1; }
+  .cursor----hover .cursor-inner {
+    background: #000;
+    opacity: 1; }
+  .cursor----hover .cursor-outer {
+    transform: scale(1.2);
+    background: transparent;
+    border-color: #000;
+    opacity: 1; }
 
 .cursor-move-inner {
   position: absolute;
@@ -99,7 +115,6 @@
   display: block;
   width: 100%;
   height: 100%;
-  background: #000;
   background: #fff;
   border-radius: 50%;
   transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1), opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); }
@@ -155,6 +170,9 @@ button {
 
 .work-text-hover {
   color: #000 !important; }
+
+.github-hover path {
+  fill: #5c6bc0 !important; }
 
 :root {
   padding: 0px;
@@ -332,9 +350,15 @@ html:hover .cursor {
     padding: 20px;
     cursor: none; }
 
+.sk-card-container-github {
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-gap: 3rem; }
+
 .sk-card-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   grid-gap: 3rem; }
   .sk-card-container .sk-card {
     position: relative; }
@@ -380,10 +404,80 @@ html:hover .cursor {
   width: 100%;
   height: 100%; }
 
-@keyframes cardAnamation {
-  form {
-    margin-bottom: 0px; }
-  to {
-    margin-bottom: 20px; } }
+.sk-behance-but {
+  margin: 100px 0px;
+  display: flex;
+  justify-content: center;
+  position: relative; }
+
+.sk-effect {
+  z-index: -11;
+  position: absolute;
+  top: -150px;
+  left: 0px;
+  width: fit-content;
+  max-width: 100%;
+  /* transform: rotate(90deg); */
+  transform: scale(0.8); }
+
+.sk-github-logo svg {
+  z-index: 80; }
+  .sk-github-logo svg g path {
+    fill: #fff; }
+
+.github {
+  padding: 20px; }
+
+.sk-github-header svg {
+  font-size: 20px;
+  margin-right: 10px;
+  color: #5c6bc0; }
+
+.sk-github-card-container {
+  background-color: #fff;
+  color: #000;
+  font-family: robotoR;
+  position: relative;
+  border-radius: 3px; }
+  .sk-github-card-container::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+    background-color: #5c6bc0;
+    opacity: 1;
+    transition: all 0.3s ease-in-out; }
+  .sk-github-card-container:hover:after {
+    opacity: 1;
+    top: -12px;
+    left: -12px; }
+  .sk-github-card-container .sk-github-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 10px; }
+    .sk-github-card-container .sk-github-header h1 {
+      font-size: 20px !important; }
+  .sk-github-card-container .sk-github-readme {
+    margin: 10px 10px; }
+    .sk-github-card-container .sk-github-readme p {
+      font-size: 14px !important;
+      white-space: normal; }
+  .sk-github-card-container .sk-github-icons {
+    display: flex;
+    margin: 15px 10px; }
+    .sk-github-card-container .sk-github-icons .sk-github-icon {
+      display: flex;
+      align-items: center;
+      margin: 0px 20px; }
+      .sk-github-card-container .sk-github-icons .sk-github-icon:first-child {
+        margin-left: 0px; }
+      .sk-github-card-container .sk-github-icons .sk-github-icon svg {
+        margin-right: 5px;
+        color: #000; }
 
 /*# sourceMappingURL=style.css.map */

@@ -25,6 +25,34 @@
             opacity: 1;
         }
     }
+    &---hover {
+        .cursor-inner {
+            transform: scale(0.5);
+
+            opacity: 0;
+        }
+
+        .cursor-outer {
+            transform: scale(1.5);
+            background: transparent;
+            border-color: #fff;
+            opacity: 1;
+        }
+    }
+    &----hover {
+        .cursor-inner {
+            // transform: scale(0.5);
+            background: #000;
+            opacity: 1;
+        }
+
+        .cursor-outer {
+            transform: scale(1.2);
+            background: transparent;
+            border-color: #000;
+            opacity: 1;
+        }
+    }
 }
 
 .cursor-move-inner {
@@ -51,7 +79,7 @@
     display: block;
     width: 100%;
     height: 100%;
-    background: #000;
+
     background: $white;
     border-radius: 50%;
     transition: transform 0.4s $ease-out-quint, opacity 0.4s $ease-out-quart;
@@ -117,4 +145,9 @@ button {
 }
 .work-text-hover {
     color: #000 !important;
+}
+.github-hover {
+    path {
+        fill: #5c6bc0 !important;
+    }
 }

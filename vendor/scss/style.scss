@@ -217,10 +217,15 @@ html:hover {
         cursor: none;
     }
 }
-
+.sk-card-container-github {
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-gap: 3rem;
+}
 .sk-card-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     grid-gap: 3rem;
     // overflow: hidden;
     // transform-style: preserve-3d;
@@ -287,11 +292,100 @@ html:hover {
     width: 100%;
     height: 100%;
 }
-@keyframes cardAnamation {
-    form {
-        margin-bottom: 0px;
+.sk-behance-but {
+    margin: 100px 0px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.sk-effect {
+    z-index: -11;
+    position: absolute;
+    top: -150px;
+    left: 0px;
+    width: fit-content;
+    max-width: 100%;
+    /* transform: rotate(90deg); */
+    transform: scale(0.8);
+}
+.sk-github-logo {
+    svg {
+        z-index: 80;
+        g {
+            path {
+                fill: $white;
+            }
+        }
     }
-    to {
-        margin-bottom: 20px;
+}
+.github{
+    padding: 20px;
+}
+.sk-github-header{
+    svg{
+        font-size: 20px;
+        margin-right: 10px;
+        color: #5c6bc0;
+    }
+}
+.sk-github-card-container {
+    background-color: $white;
+    color: #000;
+    font-family: robotoR;
+    position: relative;
+    border-radius: 3px;
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+
+        border-radius: 3px;
+        background-color: #5c6bc0;
+        opacity: 1;
+        transition: all 0.3s ease-in-out;
+    }
+    &:hover:after {
+        opacity: 1;
+        top: -12px;
+        left: -12px;
+    }
+    .sk-github-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 20px 10px;
+        h1 {
+            font-size: 20px !important;
+        }
+    }
+    .sk-github-readme {
+        margin: 10px 10px;
+
+        p {
+            font-size: 14px !important;
+            white-space: normal;
+        }
+    }
+    .sk-github-icons {
+        display: flex;
+        margin: 15px 10px;
+
+        .sk-github-icon {
+            display: flex;
+            align-items: center;
+            margin: 0px 20px;
+            &:first-child {
+                margin-left: 0px;
+            }
+            svg {
+                margin-right: 5px;
+                color: #000;
+                // font-size: 13px;
+            }
+        }
     }
 }
