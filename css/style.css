@@ -425,6 +425,14 @@ html:hover .cursor {
   .sk-github-logo svg g path {
     fill: #fff; }
 
+.github {
+  padding: 20px; }
+
+.sk-github-header svg {
+  font-size: 20px;
+  margin-right: 10px;
+  color: #5c6bc0; }
+
 .sk-github-card-container {
   background-color: #fff;
   color: #000;
