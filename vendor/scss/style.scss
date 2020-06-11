@@ -10,7 +10,7 @@
     color: $white;
     text-transform: uppercase;
     font-size: 16px;
-    cursor: none;
+    // cursor: none;
 }
 h1,
 p {
@@ -30,9 +30,33 @@ html:hover {
         opacity: 1;
     }
 }
+.sk-contianer {
+    // margin-top: 50px;
+    padding: 0px;
+    padding-left: 120px;
+    padding-right: 120px;
+}
+.margin-top-50 {
+    margin-top: 50px;
+}
+.margin-top-60 {
+    margin-top: 50px;
+}
+.margin-top-150 {
+    margin-top: 150px;
+}
+.margin-bottom-50 {
+    margin-bottom: 50px;
+}
+.margin-bottom-60 {
+    margin-bottom: 50px;
+}
+.margin-bottom-150 {
+    margin-bottom: 150px;
+}
 .sk-nav-logo {
     margin-top: 40px;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
 }
 .sk-nav-elements {
     li {
@@ -93,25 +117,70 @@ html:hover {
         height: 414px;
     }
 }
-.sk-contianer {
-    margin-top: 50px;
-    padding: 0px;
-    padding-left: 150px;
-    padding-right: 150px;
-}
+
 .sk-main-text {
     margin-top: 60px;
-    width: 100%;
+    width: 40%;
     display: flex;
     justify-content: start;
     flex-direction: column;
     h1 {
-        font-size: 2.2rem;
+        font-size: 1.5rem;
         line-height: 45px;
     }
     span {
-        font-size: 2.2rem;
+        font-size: 1.5rem;
         color: sandybrown;
+    }
+}
+.sk-anmation-images {
+    width: 60%;
+    height: auto;
+    position: relative;
+    .sk-image-1 {
+        position: absolute;
+        right: 0px;
+        top: 165px;
+        display: flex !important;
+        justify-content: center;
+        img {
+            animation-name: animate1;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            max-width: 100%;
+            height: auto;
+            width: 40%;
+        }
+    }
+    .sk-image-2 {
+        position: absolute;
+        right: -30px;
+        top: -50px;
+        display: flex;
+        justify-content: center;
+        img {
+            width: 60%;
+            max-width: 100%;
+            height: auto;
+            animation-name: animate2;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            animation-delay: 0.6s;
+        }
+    }
+    .sk-image-3 {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        img {
+            width: 60%;
+            max-width: 100%;
+            height: auto;
+            animation-name: animate3;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            animation-delay: 0.2s;
+        }
     }
 }
 .hover-h1 {
@@ -170,7 +239,7 @@ html:hover {
     margin-top: 0px;
 }
 .sk-section-2 {
-    margin-top: 150px;
+    // margin-top: 250px;
 }
 .sk-header {
     display: flex;
@@ -318,11 +387,11 @@ html:hover {
         }
     }
 }
-.github{
+.github {
     padding: 20px;
 }
-.sk-github-header{
-    svg{
+.sk-github-header {
+    svg {
         font-size: 20px;
         margin-right: 10px;
         color: #5c6bc0;
@@ -387,5 +456,40 @@ html:hover {
                 // font-size: 13px;
             }
         }
+    }
+}
+@keyframes animate1 {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(40px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes animate2 {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(20px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes animate3 {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(20px);
+    }
+    100% {
+        transform: translateY(0px);
     }
 }
