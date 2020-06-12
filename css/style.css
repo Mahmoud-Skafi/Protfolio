@@ -92,6 +92,13 @@
     background: transparent;
     border-color: #000;
     opacity: 1; }
+  .cursor-----hover .cursor-inner {
+    transform: scale(0.5);
+    opacity: 0; }
+  .cursor-----hover .cursor-outer {
+    transform: scale(1.8);
+    background: #fff;
+    opacity: 1; }
 
 .cursor-move-inner {
   position: absolute;
@@ -330,7 +337,8 @@ html:hover .cursor {
 .sk-but {
   display: flex;
   border-radius: 3px;
-  width: fit-content; }
+  width: fit-content;
+  padding: 20px; }
   .sk-but a {
     transition: all 0.5s ease-out;
     width: 180px;
@@ -410,12 +418,12 @@ html:hover .cursor {
 .sk-card-container-github {
   margin-top: 80px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   grid-gap: 3rem; }
 
 .sk-card-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 3rem; }
   .sk-card-container .sk-card {
     position: relative; }
@@ -468,6 +476,9 @@ html:hover .cursor {
   position: relative; }
 
 .sk-effect {
+  width: 100% !important;
+  display: flex;
+  justify-content: center;
   z-index: -11;
   position: absolute;
   top: -150px;

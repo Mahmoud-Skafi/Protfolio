@@ -53,6 +53,20 @@
             opacity: 1;
         }
     }
+    &-----hover {
+        .cursor-inner {
+            transform: scale(0.5);
+
+            opacity: 0;
+        }
+
+        .cursor-outer {
+            transform: scale(1.8);
+            background: $white;
+            // border-color: #000;
+            opacity: 1;
+        }
+    }
 }
 
 .cursor-move-inner {
@@ -129,7 +143,9 @@ button {
 .but-hover {
     border-color: #000 !important;
     letter-spacing: 15rem;
+
     a {
+        
         color: #000 !important;
         border-color: #000 !important;
         letter-spacing: 8.005px !important;

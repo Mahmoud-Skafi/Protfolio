@@ -88,11 +88,11 @@ for (let i = 1; i < workTextSize - 1; i++) {
 but.forEach(but => {
 
   but.addEventListener('mouseenter', () => {
-    cursor.classList.add('cursor--hover');
+    cursor.classList.add('cursor-----hover');
     but.classList.add('but-hover');
   });
   but.addEventListener('mouseleave', () => {
-    cursor.classList.remove('cursor--hover');
+    cursor.classList.remove('cursor-----hover');
     but.classList.remove('but-hover');
   });
 
