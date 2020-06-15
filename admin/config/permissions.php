@@ -4,7 +4,10 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 $permissions = [
-
+    "dashboard.php" => ['admin'],
+    "github.php" => ['admin'],
+    "callback.php" => ['admin'],
+    "data.php" => ['admin'],
 ];
 
 

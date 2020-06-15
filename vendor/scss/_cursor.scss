@@ -10,7 +10,7 @@
     transition: opacity 0.2s $ease-out-quart;
     pointer-events: none;
     background: transparent;
-    filter: grayscale(100%);
+
     &--hover {
         .cursor-inner {
             transform: scale(0.5);
@@ -19,16 +19,16 @@
         }
 
         .cursor-outer {
-            transform: scale(1.4);
+            transform: scale(1.8);
             background: $white;
             border-color: #000;
             opacity: 1;
+            filter: grayscale(100%);
         }
     }
     &---hover {
         .cursor-inner {
             transform: scale(0.5);
-
             opacity: 0;
         }
 
@@ -145,7 +145,6 @@ button {
     letter-spacing: 15rem;
 
     a {
-        
         color: #000 !important;
         border-color: #000 !important;
         letter-spacing: 8.005px !important;

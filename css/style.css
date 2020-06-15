@@ -66,16 +66,16 @@
   opacity: 0;
   transition: opacity 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
   pointer-events: none;
-  background: transparent;
-  filter: grayscale(100%); }
+  background: transparent; }
   .cursor--hover .cursor-inner {
     transform: scale(0.5);
     opacity: 0; }
   .cursor--hover .cursor-outer {
-    transform: scale(1.4);
+    transform: scale(1.8);
     background: #fff;
     border-color: #000;
-    opacity: 1; }
+    opacity: 1;
+    filter: grayscale(100%); }
   .cursor---hover .cursor-inner {
     transform: scale(0.5);
     opacity: 0; }
@@ -189,7 +189,11 @@ button {
   font-family: robotoB;
   color: #fff;
   text-transform: uppercase;
-  font-size: 16px; }
+  font-size: 16px;
+  cursor: none; }
+
+a {
+  cursor: none; }
 
 h1,
 p {

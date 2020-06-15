@@ -2,9 +2,9 @@
 session_start();
 $_CODE = $_GET['code'];
 //Client ID Get From github OAuth App.
-$_ClIENTID = '';
+$_ClIENTID = '06fe0cfca817bc4cffef';
 //Client Secret Get From github OAuth App.
-$_CLIENTSECRET = '';
+$_CLIENTSECRET = 'ae9824ab3fd57c3979d7b5f2a21cabbcf27ca9a9';
 
 $_URL = 'https://github.com/login/oauth/access_token';
 
@@ -36,5 +36,5 @@ var_dump($data);
 if ($data->access_token != "") {
     session_start();
     $_SESSION['access_token'] = $data->access_token;
-    header('location:http://localhost/index.php');
+    header('location:http://localhost/admin/data.php');
 }
