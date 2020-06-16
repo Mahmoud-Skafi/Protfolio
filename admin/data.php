@@ -48,7 +48,7 @@ if (checkPermision($pagename, $role)) {
                 $sql = $conDb->doSelectQuery($conn, "INSERT INTO tblgithub (repo_id, reop_name, repo_url, repo_description, repo_private, repo_fork, repo_fork_count, reop_stargazers_count,repo_language) 
                     VALUES ('$repo_id','$repo_name','$repo_url','$repo_description','$repo_private','$repo_fork',' $repo_forks_coun','$repo_stargazers_count','$repo_language')");
                 if ($sql['status'] == 1) {
-                    header('location:./dashboard.php');
+                    header('location:../index.php');
                 } else {
                     echo "fuck";
                 }
