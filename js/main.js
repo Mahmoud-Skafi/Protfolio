@@ -3,6 +3,7 @@ const cursor = document.querySelector('.cursor');
 const cursorInner = document.querySelector('.cursor-move-inner');
 const cursorOuter = document.querySelector('.cursor-move-outer');
 let navlinks = document.querySelectorAll('.sk-flex li');
+let footerlink = document.querySelectorAll('.sk-footer li');
 const trigger = document.querySelector('button');
 let headerText = document.querySelector('.sk-main-text h1');
 let but = document.querySelectorAll('.sk-but');
@@ -66,14 +67,6 @@ github.addEventListener('mouseleave', () => {
   cursor.classList.remove('cursor---hover');
   github.classList.remove('github-hover');
 });
-// svg.addEventListener('mouseenter',()=>{
-// cursor.classList.add('cursor--hover');
-// svgCircle.style.removeProperty('transform');
-// });
-// svg.addEventListener('mouseleave',()=>{
-// cursor.classList.remove('cursor--hover');
-//   svgCircle.style.transform='matrix(-1 0 0 1 12 13.5652) !important;';
-//   });
 let workTextSize = workText.length;
 for (let i = 1; i < workTextSize - 1; i++) {
   workText[i].addEventListener('mouseenter', () => {
@@ -85,6 +78,16 @@ for (let i = 1; i < workTextSize - 1; i++) {
     workText[i].classList.remove('work-text-hover');
   });
 };
+footerlink.forEach(link => {
+  link.addEventListener('mouseenter', () => {
+    cursor.classList.add('cursor--hover');
+    link.classList.add('hover-links');
+  });
+  link.addEventListener('mouseleave', () => {
+    cursor.classList.remove('cursor--hover');
+    link.classList.remove('hover-links');
+  });
+});
 but.forEach(but => {
 
   but.addEventListener('mouseenter', () => {
