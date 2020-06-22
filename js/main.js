@@ -132,9 +132,6 @@ function render() {
   cursorInner.style.transform = `translate3d(${innerX}px, ${innerY}px, 0)`;
   cursorOuter.style.transform = `translate3d(${outerX}px, ${outerY}px, 0) rotate(${angle}deg) scale(${1 + skwish}, ${1 - skwish})`;
 
-  // stats.end();
-
-  // Stop loop if interpolation is done.
   if (normal !== 0) {
     loop = window.requestAnimationFrame(render);
   }

@@ -9,13 +9,6 @@ include('./admin/config/permissions.php');
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SKAFIPS</title>
-  <!-- <link
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
-      crossorigin="anonymous"
-    /> -->
-
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
   <link rel="stylesheet" href="./css/style.css" />
 </head>
@@ -130,80 +123,36 @@ include('./admin/config/permissions.php');
     </div>
     <div class="" style="position: relative;">
       <div class="sk-card-container">
-        <div class="sk-card-behance-container">
-          <div class="sk-card">
-            <div class="sk-card-image">
-              <img src="./images/33.png" alt="" />
+        <?php
+        $sql = $conDb->doSelectQuery($conn, 'SELECT * FROM tblbehance WHERE 1');
+        if ($sql['status'] == 1) {
+          foreach ($sql['data'] as $row) {
+        ?>
+            <div class="sk-card-behance-container">
+              <div class="sk-card">
+                <div class="sk-card-image">
+                  <img src="./js/<?php echo $row['imgeurl'] ?>" alt="" />
+                </div>
+              </div>
+              <div class="sk-card-behance-detiles">
+                <h1><?php echo $row['title'] ?></h1>
+                <div class="sk-flex-row" style="color: #000;">
+                  <i class="fas fa-thumbs-up" style="margin-right:  5px;"></i>
+                  <p><?php echo $row['likes'] ?></p>
+                </div>
+                <div class="sk-flex-row sk-aic" style="color: #000; margin-right:  5px;">
+                  <i class="fas fa-eye" style="margin-right:  5px;"></i>
+                  <p><?php echo $row['views'] ?></p>
+                </div>
+
+              </div>
             </div>
-          </div>
-          <div class="sk-card-behance-detiles">
-            <h1>Project name</h1>
-            <p>12</p>
-            <p>150</p>
-          </div>
-        </div>
-        <div class="sk-card-behance-container">
-          <div class="sk-card">
-            <div class="sk-card-image">
-              <img src="./images/33.png" alt="" />
-            </div>
-          </div>
-          <div class="sk-card-behance-detiles">
-            <h1>Project name</h1>
-            <p>12</p>
-            <p>150</p>
-          </div>
-        </div>
-        <div class="sk-card-behance-container">
-          <div class="sk-card">
-            <div class="sk-card-image">
-              <img src="./images/33.png" alt="" />
-            </div>
-          </div>
-          <div class="sk-card-behance-detiles">
-            <h1>Project name</h1>
-            <p>12</p>
-            <p>150</p>
-          </div>
-        </div>
-        <div class="sk-card-behance-container">
-          <div class="sk-card">
-            <div class="sk-card-image">
-              <img src="./images/33.png" alt="" />
-            </div>
-          </div>
-          <div class="sk-card-behance-detiles">
-            <h1>Project name</h1>
-            <p>12</p>
-            <p>150</p>
-          </div>
-        </div>
-        <div class="sk-card-behance-container">
-          <div class="sk-card">
-            <div class="sk-card-image">
-              <img src="./images/33.png" alt="" />
-            </div>
-          </div>
-          <div class="sk-card-behance-detiles">
-            <h1>Project name</h1>
-            <p>12</p>
-            <p>150</p>
-          </div>
-        </div>
-        <div class="sk-card-behance-container">
-          <div class="sk-card">
-            <div class="sk-card-image">
-              <img src="./images/33.png" alt="" />
-            </div>
-          </div>
-          <div class="sk-card-behance-detiles">
-            <h1>Project name</h1>
-            <p>12</p>
-            <p>150</p>
-          </div>
-        </div>
+        <?php
+          }
+        }
+        ?>
       </div>
-      <div class="sk-behance-but" style="">
+      <div class=" sk-behance-but" style="">
         <div class="sk-but">
           <a style="width: 220px;" href="">load more 👀</a>
         </div>
@@ -421,6 +370,7 @@ include('./admin/config/permissions.php');
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.5.2/smooth-scrollbar.js" integrity="sha256-6Z1pVtavnUt7YMua8WvatI1NbhECmyL8DMb8DDqrnKg=" crossorigin="anonymous"></script> -->
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.5.2/plugins/overscroll.js" integrity="sha256-Q2+Qb+1Yl05mT5BBMeAE15Dce0Ti1OLDXMKj/czMJh0=" crossorigin="anonymous"></script> -->
   <script src="./js/main.js"></script>
+  <!-- <script src="./js/behance.js"></script> -->
 
 </body>
 

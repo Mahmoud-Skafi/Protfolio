@@ -4,6 +4,12 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "fs": "0.0.1-security",
+    "mysql": "^2.18.1",
+    "puppeteer": "^4.0.0",
+    "puppeteer-core": "^4.0.0",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.5",
     "smooth-scrollbar": "^8.5.2"
   },
   "devDependencies": {},
