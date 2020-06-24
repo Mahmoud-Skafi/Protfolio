@@ -26,6 +26,9 @@
 @font-face {
   font-family: moSB;
   src: url("../fonts/Montserrat-SemiBold.ttf"); }
+@font-face {
+  font-family: moM;
+  src: url("../fonts/Montserrat-Medium.ttf"); }
 .sk-jcc {
   display: flex;
   justify-content: center; }
@@ -255,11 +258,15 @@ h5,
 h6 {
   all: unset; }
 
+p {
+  margin: 0px;
+  padding: 0px; }
+
 .sk-container {
   margin: 0px;
   padding: 0px;
-  padding-left: 240px;
-  padding-right: 100px; }
+  padding-left: 350px;
+  padding-right: 350px; }
 
 .margin-top-50 {
   margin-top: 50px; }
@@ -285,16 +292,30 @@ h6 {
 .padding-left-0 {
   padding-left: 0px !important; }
 
-.sk-but a {
-  padding: 10px 10px;
+.sk-but {
   background-color: #202020;
-  font-family: moSB;
-  color: #fff;
-  font-size: 14px; }
+  width: 250px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px; }
+  .sk-but a {
+    font-family: moSB;
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 0.09em; }
+
+.sk-contact {
+  display: flex;
+  align-items: center;
+  margin-right: 50px !important; }
+  .sk-contact a {
+    margin: 0px 10px; }
 
 .sk-nav-container {
   padding: 0px 30px !important;
-  height: 60px;
+  height: 120px;
   margin: 0px;
   padding: 0px;
   display: flex;
@@ -307,16 +328,16 @@ h6 {
     .sk-nav-container .sk-nav-elements ul {
       display: flex; }
       .sk-nav-container .sk-nav-elements ul li {
-        margin: 0px 15px;
+        margin: 0px 40px;
         list-style: none; }
         .sk-nav-container .sk-nav-elements ul li a {
-          font-size: 14px;
+          font-size: 20px;
           font-family: moSB;
           position: relative; }
           .sk-nav-container .sk-nav-elements ul li a::after {
             content: "";
             position: absolute;
-            top: 12px;
+            top: 16px;
             z-index: -1;
             left: -2px;
             width: 0px;
@@ -335,35 +356,42 @@ h6 {
   .sk-main-page .sk-main-page-image {
     position: absolute;
     max-width: 100%;
-    top: 100px;
-    left: -85px; }
+    top: 165px;
+    left: -165px; }
     .sk-main-page .sk-main-page-image img {
-      width: 250px; }
+      width: 435px;
+      max-width: 100%; }
 
 .sk-main-contient {
   margin-top: 80px;
-  width: 60%; }
+  width: 64%; }
   .sk-main-contient h1 {
-    font-size: 2rem;
-    line-height: 50px; }
+    font-size: 50px;
+    line-height: 77px; }
   .sk-main-contient p {
-    font-size: 11px; }
+    font-size: 25px;
+    color: #b7b9cc;
+    font-family: moM; }
   .sk-main-contient .sk-but-contianer {
-    margin: 50px 0px; }
-    .sk-main-contient .sk-but-contianer a {
-      margin: 0px 10px; }
-      .sk-main-contient .sk-but-contianer a:nth-child(1) {
-        margin-left: 0px; }
+    margin: 85px 0px; }
+    .sk-main-contient .sk-but-contianer div {
+      margin: 0px 30px; }
+      .sk-main-contient .sk-but-contianer div:nth-child(1) {
+        margin-left: 0px;
+        background-color: #fdbc3a; }
 
 .sk-first-container {
-  width: 56%;
+  width: 65%;
   justify-content: space-between; }
 
 .sk-animation-image {
   position: absolute;
-  top: -100px;
+  top: -85px;
   right: 0px;
   z-index: -1; }
+  .sk-animation-image img {
+    width: 700px;
+    max-width: 100%; }
 
 .sk-animation-three-images {
   position: absolute;
@@ -371,20 +399,20 @@ h6 {
   right: 0px; }
   .sk-animation-three-images > div:nth-child(1) {
     position: absolute;
-    top: 100px;
-    right: 150px; }
+    top: 150px;
+    right: 250px; }
     .sk-animation-three-images > div:nth-child(1) img {
-      width: 400px;
+      width: 510px;
       animation-name: animate3;
       animation-duration: 4s;
       animation-iteration-count: infinite;
       animation-delay: 0.2s; }
   .sk-animation-three-images > div:nth-child(2) {
     position: absolute;
-    top: 250px;
-    right: 100px; }
+    top: 400px;
+    right: 190px; }
     .sk-animation-three-images > div:nth-child(2) img {
-      width: 120px;
+      width: 150px;
       animation-name: animate2;
       animation-duration: 4s;
       animation-iteration-count: infinite;
@@ -392,9 +420,9 @@ h6 {
   .sk-animation-three-images > div:nth-child(3) {
     position: absolute;
     top: 0px;
-    right: 80px; }
+    right: 100px; }
     .sk-animation-three-images > div:nth-child(3) img {
-      width: 200px;
+      width: 250px;
       animation-name: animate1;
       animation-duration: 4s;
       animation-iteration-count: infinite;
@@ -407,10 +435,10 @@ h6 {
   padding-right: 100px; }
 
 .sk-top-skills-cards-contianer {
-  margin-top: 120px;
+  padding: 120px 0px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-gap: 1rem; }
+  grid-gap: 3rem; }
   .sk-top-skills-cards-contianer .sk-skill-card {
     display: flex;
     justify-content: space-evenly;
@@ -433,23 +461,39 @@ h6 {
   .sk-aboutme-container .sk-aboutme-image {
     margin-right: 150px; }
     .sk-aboutme-container .sk-aboutme-image img {
-      width: 300px; }
+      width: 440px; }
   .sk-aboutme-container .sk-aboutme-content h1 {
-    font-size: 2rem;
+    font-size: 35px;
     line-height: 57px;
     position: relative; }
     .sk-aboutme-container .sk-aboutme-content h1::after {
       content: "";
       position: absolute;
-      top: 20px;
+      top: 30px;
       left: -10px;
       width: 105%;
       height: 14px;
       background-color: #fdbc3a;
       z-index: -1; }
   .sk-aboutme-container .sk-aboutme-content p {
+    margin: 50px 0px;
     color: #b7b9cc;
     font-family: moSb;
+    font-size: 25px;
     line-height: 25px; }
+
+.margin-TB-50 {
+  margin: 50px 0px; }
+
+.sk-posR {
+  position: relative; }
+
+.sk-effect-image {
+  position: absolute;
+  top: 200px;
+  right: 0px; }
+  .sk-effect-image img {
+    max-width: 100%;
+    width: 135px; }
 
 /*# sourceMappingURL=style.css.map */

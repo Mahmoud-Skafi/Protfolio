@@ -85,6 +85,10 @@ $headings-font-weight: 400 !default;
   font-family: moSB;
   src: url("../fonts/Montserrat-SemiBold.ttf");
 }
+@font-face {
+  font-family: moM;
+  src: url("../fonts/Montserrat-Medium.ttf");
+}
 // Shadows
 $box-shadow-sm: 0 0.125rem 0.25rem 0 rgba($gray-900, 0.2) !default;
 $box-shadow: 0 0.15rem 1.75rem 0 rgba($gray-900, 0.15) !default;
