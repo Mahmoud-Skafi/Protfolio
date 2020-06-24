@@ -16,13 +16,14 @@ const puppeteer = require('puppeteer');
     const repoTitles = await page.evaluate(() => Array.from(document.querySelectorAll('#user-repositories-list >ul>li>div:nth-child(1)>div:nth-child(1)>h3>a'), e => e.innerText));
     const repourl = await page.evaluate(() => Array.from(document.querySelectorAll('#user-repositories-list >ul>li>div:nth-child(1)>div:nth-child(1)>h3>a'), e => e.getAttribute('href')));
     const repoDescription = await page.evaluate(() => Array.from(document.querySelectorAll('#user-repositories-list >ul>li>div:nth-child(1)>div:nth-child(2)>p'), e => e.innerText));
-    const repoColor = await page.evaluate(() => Array.from(document.querySelectorAll('#user-repositories-list >ul>li>div:nth-child(1)>div:nth-child(3)>span>span:nth-child(1)'), e => e.getAttribute('style')));
+    var repoColor = await page.evaluate(() => Array.from(document.querySelectorAll('#user-repositories-list >ul>li>div:nth-child(1)>div:nth-child(3)>span>span:nth-child(1)'), e => e.getAttribute('style')));
     const repoLanguage = await page.evaluate(() => Array.from(document.querySelectorAll('#user-repositories-list >ul>li>div:nth-child(1)>div:nth-child(3)>span>span:nth-child(2)'), e => e.innerText));
     const repoStar = await page.evaluate(() => Array.from(document.querySelectorAll('#user-repositories-list >ul>li>div:nth-child(1)>div:nth-child(3)>a:nth-child(2)'), e => e.innerText));
     const repoFork = await page.evaluate(() => Array.from(document.querySelectorAll('#user-repositories-list >ul>li>div:nth-child(1)>div:nth-child(3)>a:nth-child(3)'), e => e.innerText));
-
+    
+   console.log(repoTitles,repourl)
     for (let i = 0; i < repoTitles.length; i++) {
-
+        repoColor[i] = repoColor[i].replace('background-color: ', '');
         let data = {
             "reop_name": repoTitles[i],
             "repo_url": 'https://github.com' + repourl[i],
