@@ -88,11 +88,6 @@ include('./admin/config/permissions.php');
                 <img src="./images/index4.png" alt="" />
               </div>
             </div>
-
-            <!-- <div class="sk-about-image">
-              
-              <img src="./images/1.png" alt="" />
-            </div> -->
           </div>
         </div>
       </div>
@@ -205,10 +200,11 @@ include('./admin/config/permissions.php');
                 <p>
                   <?php echo $row['repo_description'] ?>
                 </p>
+
               </div>
               <div class="sk-github-icons">
                 <div class="sk-github-icon">
-                  <i class="fas fa-circle" style="color: #ff3f3f; font-size: 13px;"></i>
+                  <i class="fas fa-circle" style="color:<?php echo $row['repo_color'] ?> ;"></i>
                   <p> <?php echo $row['repo_language'] ?></p>
                 </div>
                 <div class="sk-github-icon">
