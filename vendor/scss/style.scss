@@ -917,7 +917,7 @@ p {
         p {
             margin: 50px 0px;
             color: $gray-500;
-            font-family: moSb;
+            font-family: moM;
             font-size: 25px;
             line-height: 25px;
         }
@@ -933,8 +933,88 @@ p {
     position: absolute;
     top: 200px;
     right: 0px;
-    img{
+    img {
         max-width: 100%;
         width: 135px;
+    }
+}
+.sk-height-100vh {
+    height: 100vh !important;
+}
+.sk-srvices-container {
+    padding-top: 80px;
+}
+.sk-text-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h1 {
+        font-size: 35px;
+    }
+    p {
+        padding: 30px 0px;
+        font-size: 20px;
+        font-family: moM;
+        width: 70%;
+        text-align: center;
+        color: $gray-500;
+    }
+}
+.sk-services-cards-container {
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 3rem;
+}
+.sk-services-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 40px -3px rgba(0, 0, 0, 0.1);
+    position: relative;
+    cursor: pointer;
+    &::after {
+        content: "";
+        position: absolute;
+        top: -0px;
+        left: -0px;
+        width: 100%;
+        height: 100%;
+        border: 5px solid $secondary-clr;
+        transition: all 0.2s ease-out;
+        z-index: -1;
+        opacity: 0;
+    }
+    &:hover:after {
+        opacity: 1;
+        top: -25px;
+        left: -20px;
+    }
+    .sk-service-image {
+        padding: 20px;
+        img {
+            width: 80px;
+        }
+    }
+    .sk-text-card-header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+
+        h1 {
+            font-size: 25px;
+            padding: 20px 0px;
+        }
+        p {
+            width: 100%;
+            padding-bottom: 20px;
+            color: $gray-500;
+            font-family: moM;
+        }
     }
 }
