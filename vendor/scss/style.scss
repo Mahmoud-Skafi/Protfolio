@@ -629,6 +629,7 @@
 @import "_display.scss";
 @import "_cursor.scss";
 @import "_animations.scss";
+
 :root {
     margin: 0px;
     padding: 0px;
@@ -951,6 +952,17 @@ p {
     align-items: center;
     h1 {
         font-size: 35px;
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            top: 30px;
+            left: -10px;
+            width: 105%;
+            height: 14px;
+            background-color: $primary-clr;
+            z-index: -1;
+        }
     }
     p {
         padding: 30px 0px;
@@ -1017,4 +1029,104 @@ p {
             font-family: moM;
         }
     }
+}
+.sk-work-text-container {
+    display: flex;
+    // align-items: center;
+    > div {
+        width: 80%;
+    }
+}
+.sk-design-slider {
+    ul {
+        padding: 0px;
+
+        display: flex;
+        li {
+            margin: 10px 30px;
+            list-style: none;
+            &:nth-child(1) {
+                margin-left: 0px;
+            }
+            a {
+                text-decoration: none;
+                color: $secondary-clr;
+                position: relative;
+                transition: all 0.2s ease-out;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 12px;
+                    left: -3px;
+                    width: 0%;
+                    height: 10px;
+                    background-color: $primary-clr;
+                    z-index: -1;
+                    transition: all 0.5s ease-out;
+                }
+            }
+            &:hover a::after {
+                width: 110%;
+            }
+        }
+    }
+}
+.sk-behance-cards-container {
+    padding: 20px;
+    padding-left: 0px;
+    .sk-behance-card {
+        display: flex;
+        flex-direction: column;
+        transition: all 0.5s ease-in-out;
+        &:hover {
+            transform: scale(1.08);
+        }
+        .sk-behance-image {
+            &::after {
+            }
+            img {
+                max-width: 100%;
+                width: 385px;
+                position: relative;
+            }
+        }
+    }
+}
+.sk-work-text {
+    h1 {
+        font-size: 35px;
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            top: 30px;
+            left: -10px;
+            width: 105%;
+            height: 14px;
+            background-color: $primary-clr;
+            z-index: -1;
+        }
+    }
+    p {
+        padding: 40px 0px;
+        font-size: 25px;
+        color: $gray-500;
+        font-family: moM;
+    }
+}
+.sk-but-fix {
+    width: fit-content !important;
+    padding: 0px 10px;
+    margin-top: 0px;
+    background-color: $primary-clr;
+}
+.sk-work-container {
+    padding-top: 200px;
+}
+.sk-container-100px
+{
+    margin: 0px;
+    padding: 0px;
+    padding-left: 120px;
+    padding-right: 120px;
 }

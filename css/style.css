@@ -508,7 +508,17 @@ p {
   justify-content: center;
   align-items: center; }
   .sk-text-header h1 {
-    font-size: 35px; }
+    font-size: 35px;
+    position: relative; }
+    .sk-text-header h1::after {
+      content: "";
+      position: absolute;
+      top: 30px;
+      left: -10px;
+      width: 105%;
+      height: 14px;
+      background-color: #fdbc3a;
+      z-index: -1; }
   .sk-text-header p {
     padding: 30px 0px;
     font-size: 20px;
@@ -565,5 +575,33 @@ p {
       padding-bottom: 20px;
       color: #b7b9cc;
       font-family: moM; }
+
+.sk-work-text-container {
+  display: flex;
+  align-items: center; }
+  .sk-work-text-container > div {
+    width: 80%; }
+
+.sk-design-slider ul {
+  padding: 0px;
+  display: flex; }
+  .sk-design-slider ul li {
+    margin: 10px 30px;
+    list-style: none; }
+    .sk-design-slider ul li:nth-child(1) {
+      margin-left: 0px; }
+    .sk-design-slider ul li a {
+      text-decoration: none;
+      color: #202020;
+      position: relative; }
+      .sk-design-slider ul li a::after {
+        content: "";
+        position: absolute;
+        top: 12px;
+        left: 0px;
+        width: 110%;
+        height: 10px;
+        background-color: #fdbc3a;
+        z-index: -1; }
 
 /*# sourceMappingURL=style.css.map */
