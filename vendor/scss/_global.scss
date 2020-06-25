@@ -1,4 +1,3 @@
-
 // Color Variables
 $white: #fff !default;
 $gray-100: #f8f9fc !default;
@@ -27,19 +26,22 @@ $cyan: #36b9cc !default;
 $brand-google: #ea4335;
 $brand-facebook: #3b5998;
 //Website Color
-$primary-clr:#282828;
-$behance-clr:#4176FA;
-$github-clr:#5C6BC0;
-$but-clr:#C4C4C4;
-$but-shadow:rgba(196,196,196,.6);
-
+$primary-clr: #282828;
+$behance-clr: #4176fa;
+$github-clr: #5c6bc0;
+$but-clr: #c4c4c4;
+$but-shadow: rgba(196, 196, 196, 0.6);
+//NEW DESIGN
+$primary-clr: #fdbc3a;
+$secondary-clr: #202020;
 // Set Contrast Threshold
 $yiq-contrasted-threshold: 195 !default;
 
 // Typography
 $body-color: $gray-600 !default;
 
-$font-family-sans-serif: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", 'Noto Color Emoji' !default;
+$font-family-sans-serif: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+  sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 
 $font-weight-light: 300 !default;
 // $font-weight-base: 400;
@@ -47,34 +49,49 @@ $headings-font-weight: 400 !default;
 
 //All Fonts
 @font-face {
-    font-family: robotoT !important;
-    src: url("../fonts/Roboto-Thin.ttf");
-  }
-  @font-face {
-    font-family: robotoR;
-    src: url("../fonts/Roboto-Regular.ttf");
-  }
-  
-  @font-face {
-    font-family: robotoM;
-    src: url("../fonts/Roboto-Medium.ttf");
-  }
-  @font-face {
-    font-family: robotoL;
-    src: url("../fonts/Roboto-Light.ttf");
-  }
-  @font-face {
-    font-family: robotoB;
-    src: url("../fonts/Roboto-Bold.ttf");
-  }
-  @font-face {
-    font-family: robotoBB;
-    src: url("../fonts/Roboto-Black.ttf");
-  }
+  font-family: robotoT !important;
+  src: url("../fonts/Roboto-Thin.ttf");
+}
+@font-face {
+  font-family: robotoR;
+  src: url("../fonts/Roboto-Regular.ttf");
+}
 
+@font-face {
+  font-family: robotoM;
+  src: url("../fonts/Roboto-Medium.ttf");
+}
+@font-face {
+  font-family: robotoL;
+  src: url("../fonts/Roboto-Light.ttf");
+}
+@font-face {
+  font-family: robotoB;
+  src: url("../fonts/Roboto-Bold.ttf");
+}
+@font-face {
+  font-family: robotoBB;
+  src: url("../fonts/Roboto-Black.ttf");
+}
+@font-face {
+  font-family: nkR;
+  src: url("../../fonts/nk57-monospace-no-rg.ttf");
+}
+@font-face {
+  font-family: nkB;
+  src: url("../../fonts/nk57-monospace-no-bd.ttf");
+}
+@font-face {
+  font-family: moSB;
+  src: url("../../fonts/Montserrat-SemiBold.ttf");
+}
+@font-face {
+  font-family: moM;
+  src: url("../../fonts/Montserrat-Medium.ttf");
+}
 // Shadows
-$box-shadow-sm: 0 0.125rem 0.25rem 0 rgba($gray-900, .2) !default;
-$box-shadow: 0 0.15rem 1.75rem 0 rgba($gray-900, .15) !default;
+$box-shadow-sm: 0 0.125rem 0.25rem 0 rgba($gray-900, 0.2) !default;
+$box-shadow: 0 0.15rem 1.75rem 0 rgba($gray-900, 0.15) !default;
 // $box-shadow-lg: 0 1rem 3rem rgba($black, .175) !default;
 
 // Borders Radius
@@ -98,7 +115,7 @@ $spacer: 1rem;
 $grid-gutter-width: $spacer * 1.5;
 
 // Transitions
-$transition-collapse: height .15s ease !default;
+$transition-collapse: height 0.15s ease !default;
 
 // Dropdowns
 $dropdown-font-size: 0.85rem;
